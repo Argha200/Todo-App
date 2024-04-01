@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="add-section-container">
+                <h1>TODO LIST</h1>
+                <div class="add-section-input-field">
+                    <input type="text" id="taskInput" placeholder="Write your todo list here..." name="">
+                    <button onclick="addTask()">Add</button>
+                </div>                
+            </div>
+            <div class="list-section-container">
+                <h1>LIST OF WORKS TODO</h1>
+                <div class="list-section-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SL NO.</th>
+                                <th>Task Name</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskTableBody">
+
+                        </tbody>
+                    </table>
+                    <p id="empty-message" style="display: none;">No tasks to display</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Modal for editing tasks -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Task</h2>
+      <input type="text" id="editTaskInput" placeholder="Enter task">
+      <select id="editStatusSelect">
+        <option value="To Do">To Do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button id="saveEditBtn">Update Task</button>
+    </div>
+  </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
